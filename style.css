@@ -1,0 +1,220 @@
+/* Resetando alguns estilos padrões do navegador */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 200;
+    background-color: #3498db;
+    color: white;
+    align-items: center;
+  
+    
+}
+
+ul{
+    display: flex;
+    list-style: none;
+
+
+
+
+
+
+    
+}
+ul a{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 20px 50px;
+    font-weight: 300;
+
+}
+
+
+ul a:hover{
+color: white;
+transition: all 500ms ease;
+background-color: #0e66a1;
+    
+}
+
+
+section {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    border: 2px solid #3498db; /* Borda azul profissional */
+    margin-top: 30px;
+}
+
+h2 {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+span {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo para os campos de entrada */
+.input {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #3498db; /* Cor azul vibrante para borda */
+    border-radius: 5px;
+    background-color: #f0f8ff; /* Cor de fundo suave */
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"]:hover {
+    border-color: #2980b9; /* Azul escuro no hover */
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9; /* Azul escuro no foco */
+    background-color: #eaf6ff; /* Fundo suave no foco */
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #3498db; /* Azul vibrante */
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9; /* Azul escuro no hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Mensagens de erro */
+h2#erro {
+    font-size: 1.2rem;
+    color: #e74c3c; /* Cor de erro */
+    margin-top: 20px;
+}
+
+p#Perro {
+    font-size: 1rem;
+    color: #e74c3c; /* Cor de erro */
+}
+
+.mapa{
+    border-radius: 10px;
+    margin-top: 5rem;
+    border: 2px solid #3498db; /* Cor azul vibrante para borda */
+    width: 100%;
+    height: 100vh;
+    background-color: #3498db;
+
+}
+
+iframe{
+    width: 10%;
+    height: auto;
+}
+
+
+.h2_mapa{
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header{
+        width: 100%;
+    }
+    section {
+        padding: 20px;
+        width: 90%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
