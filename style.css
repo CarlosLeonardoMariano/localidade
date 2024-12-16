@@ -193,7 +193,7 @@ iframe{
 
 
 /* Responsividade */
-@media (max-width: 400px) {
+/*@media (max-width: 400px) {
     * {
         font-family: "Poppins", serif;
         padding: 5px;
@@ -238,3 +238,33 @@ body {
         font-size: 1.2rem;
     }
 }
+ */
+
+
+ @media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items:center ; /* Center items */
+        font-size :16px ; /* Adjust font size */
+    }
+ 
+    ul a {
+        padding :10px ; /* Reduce padding for smaller screens */
+        font-weight :400 ; /* Adjust font weight */
+    }
+ 
+    section {
+        padding :20px ; /* Reduce padding in section */
+        margin-top :15px ; /* Adjust margin */
+    }
+ 
+    h2 {
+        font-size :1.25rem ; /* Smaller heading size */
+    }
+ 
+    input[type="text"],
+    button {
+        padding :10px ; /* Adjust padding for inputs and buttons */
+        font-size :1rem ; /* Adjust font size */
+    }
+ }
