@@ -123,6 +123,23 @@ input[type="text"]:focus {
     border-color: #2980b9; /* Azul escuro no foco */
     background-color: #eaf6ff; /* Fundo suave no foco */
 }
+#copy{
+    position: relative;
+    bottom: 70px;
+    left: 90%;
+    background-color: transparent;
+    color: #0e66a1;
+    font-size: 22px;
+    transition: 300ms ease;
+
+}
+
+#copy:hover{
+    color: #e74c3c;
+    transform: scale(1.2);
+
+}
+
 
 /* Estilo para o botão */
 button {

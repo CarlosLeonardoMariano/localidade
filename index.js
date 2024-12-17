@@ -6,6 +6,8 @@ const botao = document.getElementById('botao')
 const btnRemover = document.querySelector('.btn-remover')
 const btnPhone = document.querySelector('.btn-phone')
 const ulPhone = document.querySelector('.ul_phone')
+const localAtual = document.getElementById('atual')
+const copy = document.getElementById('copy')
 
 
 
@@ -23,6 +25,8 @@ navigator.geolocation.getCurrentPosition(localizar,erro)
 function localizar(cordenadas){
 latitude.value = cordenadas.coords.latitude
 longitude.value = cordenadas.coords.longitude
+localAtual.value = `${latitude.value}, ${longitude.value}`;
+
 bloqueado.innerHTML = ''
 bloqueadoP.innerHTML =''
 } 
@@ -59,5 +63,28 @@ btnRemover.addEventListener('click', () => {
     btnPhone.style.display = 'flex';
 
 });
+
+// Função para copiar o valor do input para a área de transferência
+copy.addEventListener('click' , ()=> {
+    const textoParaCopiar = localAtual.value;
+    navigator.clipboard.writeText(textoParaCopiar)
+    .then( ()=> {
+        console.log('Copiado com sucesso:' , textoParaCopiar)
+        Toastify({
+            text: "Localização Copiada com sucesso",
+            duration: 3000, // Tempo em milissegundos que a notificação ficará visível
+            gravity: "top", // Posição "top" ou "bottom"
+            position: "right", // Posição "left", "center", "right"
+            offset: {
+                x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+                y: 100 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+              },
+            backgroundColor: "green", // Cor de fundo da notificação
+          }).showToast();
+    })
+    .catch(error => {
+        console.log('Erro ao copiar:', error)
+    })
+})
 
 
