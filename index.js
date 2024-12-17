@@ -3,6 +3,12 @@ const longitude = document.getElementById('longitude')
 const bloqueado = document.getElementById('erro')
 const bloqueadoP = document.getElementById('Perro')
 const botao = document.getElementById('botao')
+const btnRemover = document.querySelector('.btn-remover')
+const btnPhone = document.querySelector('.btn-phone')
+const ulPhone = document.querySelector('.ul_phone')
+
+
+
 
 botao.addEventListener('click', ()=>{
 if(navigator.geolocation){
@@ -19,8 +25,8 @@ latitude.value = cordenadas.coords.latitude
 longitude.value = cordenadas.coords.longitude
 bloqueado.innerHTML = ''
 bloqueadoP.innerHTML =''
-
 } 
+
 
 function erro(){
     latitude.value = ''
@@ -32,3 +38,26 @@ function erro(){
     3. Atualize a página para que a alteração tenha efeito. <br>
     Caso esteja utilizando um dispositivo móvel, acesse as configurações de privacidade e permita o acesso à localização para este site.`;
     }
+
+
+
+    // Adicionando o evento de clique para o efeito toggle
+
+    btnPhone.addEventListener('click', ()=> {
+        ulPhone.classList.add('active')
+        btnRemover.classList.add('active2')
+        btnPhone.style.display = 'none';
+
+
+    })
+
+
+// Adiciona o evento para fechar a lista
+btnRemover.addEventListener('click', () => {
+    ulPhone.classList.remove('active'); // Remove a classe 'active'
+    btnRemover.classList.remove('active2')
+    btnPhone.style.display = 'flex';
+
+});
+
+

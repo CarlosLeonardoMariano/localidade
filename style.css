@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -60,6 +64,9 @@ background-color: #0e66a1;
     
 }
 
+.espaçamento{
+    padding-top: 100px;
+}
 
 section {
     width: 100%;
@@ -181,8 +188,9 @@ iframe{
 
 
 
-
-
+.header_phone{
+    display: none;
+}
 
 
 
@@ -193,60 +201,53 @@ iframe{
 
 
 /* Responsividade */
-/*@media (max-width: 400px) {
-    * {
-        font-family: "Poppins", serif;
-        padding: 5px;
-        margin: 10px;
-        box-sizing: border-box;
-    }
-
-    
-body {
- 
-    line-height: 1.6;
-    min-height: 100vh;
-    width: 100%;
-}
-    header{
-        width: 100%;
-        font-size: 15px;
-    }
-
-    ul a{
-        padding: 10px 20px;
-    }
-
-
-
-
-
-    section {
-        padding: 20px;
-        width: 90%;
-    }
-
-    input[type="text"] {
-        width: 100%;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-}
- */
-
 
  @media (max-width: 600px) {
+  
     header {
         flex-direction: column; /* Stack items vertically */
         align-items:center ; /* Center items */
         font-size :16px ; /* Adjust font size */
+
     }
+    
+
+    ul{
+        display: none;
+    }
+
+    .icon-pc{
+        display: none;
+    }
+
+  .ul_phone {
+    display:none;
+
+  }
+
+  
+ .ul_phone.active{
+    display: flex;
+ }
+
+ .btn-remover{
+    display: none;
+}
+
+.btn-remover.active2{
+    display: flex;
+
+}
+
+
+    .header_phone{
+        display: block;
+    }
+  
+    
+   
+
+    
  
     ul a {
         padding :10px ; /* Reduce padding for smaller screens */
