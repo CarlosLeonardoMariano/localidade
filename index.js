@@ -77,7 +77,7 @@ copy.addEventListener('click' , ()=> {
             position: "right", // Posição "left", "center", "right"
             offset: {
                 x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                y: 100 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                y: 60 // vertical axis - can be a number or a string indicating unity. eg: '2em'
               },
             backgroundColor: "green", // Cor de fundo da notificação
           }).showToast();

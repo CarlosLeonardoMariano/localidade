@@ -286,3 +286,12 @@ iframe{
         font-size :1rem ; /* Adjust font size */
     }
  }
+
+
+ #copy{
+    position: relative;
+    bottom: 70px;
+    left: 86%;
+    font-size: 22px;
+
+}
