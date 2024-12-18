@@ -8,6 +8,9 @@ const btnPhone = document.querySelector('.btn-phone')
 const ulPhone = document.querySelector('.ul_phone')
 const localAtual = document.getElementById('atual')
 const copy = document.getElementById('copy')
+const localização = document.getElementById('share-location')
+const botao2 = document.getElementById("botao2")
+
 
 
 
@@ -26,10 +29,26 @@ function localizar(cordenadas){
 latitude.value = cordenadas.coords.latitude
 longitude.value = cordenadas.coords.longitude
 localAtual.value = `${latitude.value}, ${longitude.value}`;
+    // Inicializa o mapa
+    initMap(cordenadas.coords.latitude, cordenadas.coords.longitude);
+
 
 bloqueado.innerHTML = ''
 bloqueadoP.innerHTML =''
 } 
+
+
+
+
+botao2.addEventListener('click', ()=> {
+if(localAtual.value === '') {
+    alert('Sua localização está vazia')
+} else{
+    // Abre o Google Maps automaticamente
+    const mapsUrl = `https://www.google.com/maps?q=${latitude.value},${longitude.value}`;
+    window.open(mapsUrl, '_blank');
+}
+})
 
 
 function erro(){
@@ -68,23 +87,54 @@ btnRemover.addEventListener('click', () => {
 copy.addEventListener('click' , ()=> {
     const textoParaCopiar = localAtual.value;
     navigator.clipboard.writeText(textoParaCopiar)
-    .then( ()=> {
-        console.log('Copiado com sucesso:' , textoParaCopiar)
+    if(localAtual.value === ''){
         Toastify({
-            text: "Localização Copiada com sucesso",
-            duration: 3000, // Tempo em milissegundos que a notificação ficará visível
-            gravity: "top", // Posição "top" ou "bottom"
-            position: "right", // Posição "left", "center", "right"
+            text: "Localização atual vazia",
+            duration: 3000, 
+            gravity: "top", 
+            position: "right", 
             offset: {
-                x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-                y: 60 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+                x: 10, 
+                y: 60 
               },
-            backgroundColor: "green", // Cor de fundo da notificação
+            backgroundColor: "red",
           }).showToast();
-    })
-    .catch(error => {
-        console.log('Erro ao copiar:', error)
-    })
-})
+          console.log('Erro ao copiar:', error)
+
+
+        }
+        else{  
+            Toastify({
+                text: "Localização Copiado com sucesso",
+                duration: 3000, 
+                gravity: "top", 
+                position: "right", 
+                offset: {
+                    x: 10, 
+                    y: 60 
+                  },
+                backgroundColor: "green",
+              }).showToast();
+              console.log('Localização Copiado com sucesso:' , textoParaCopiar)
+
+    }
+});
+
+
+    localização.addEventListener('click', () => {
+        const latitude = document.getElementById('latitude').value;
+        const longitude = document.getElementById('longitude').value;
+
+        if (latitude && longitude) {
+            const locationURL = `https://www.google.com/maps?q=${latitude},${longitude}`;
+            const message = `Minha localização atual é: ${locationURL}`;
+            const whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappURL, '_blank');
+        } else {
+            alert('Localização não encontrada. Por favor, descubra sua localização antes de compartilhar.');
+        }
+    });
+
 
 

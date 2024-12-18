@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>  <!--LINK DO TOASTIFY DO CSS-->
-
     <title>LOCALIZAÇÃO</title>
 </head>
 <body>
@@ -17,7 +16,7 @@
 
         <ul>
             <li>
-                <a href="#topo">Home</a>
+                <a href="#espaçamento">Home</a>
 
             </li>
 
@@ -27,7 +26,7 @@
             </li>
 
             <li>
-                <a href="#input">Localização</a>
+                <a href="#sobre-conteudo">Sobre</a>
             </li>
         </ul>
 
@@ -49,7 +48,7 @@
 
         <ul style="flex-direction: column;" class="ul_phone">
             <li>
-                <a href="#topo">Home</a>
+                <a href="#espaçamento">Home</a>
 
             </li>
 
@@ -59,7 +58,7 @@
         </li>
 
             <li>
-                <a href="#input">Localização</a>
+                <a href="#sobre-conteudo">Sobre</a>
             </li>
         </ul>
 
@@ -67,11 +66,11 @@
     </div>
 
 
- <div class="espaçamento">
+ <div class="espaçamento" id="espaçamento">
 
  </div>
 
- <h2 id="h2cabeca">SUA LOCALIZAÇÃO ATUAL</h2>
+ <h2 id="h2cabeca">SUA LOCALIZAÇÃO ATUAL <i class="fa-solid fa-location-dot" style="margin-left: 5px;"></i></h2>
     <section>
 
         <div class="input" id="input">
@@ -94,6 +93,10 @@
 
     </div>
     <button id="botao">Descobrir Localização</button>
+    <button id="botao2">Acessar sua localização no Maps</button>
+    <button id="share-location" class="btn-share">
+        <i class="fa-solid fa-share-nodes"></i> Compartilhar Localização
+    </button>
     <h2 id="erro"></h2>
     <p id="Perro"></p>
 </section>
@@ -109,6 +112,34 @@
 </iframe>
 
 </div>
+
+  <div class="caixa">
+        <div class="sobre-conteudo" id="sobre-conteudo">
+            <h2>Quem Somos ?</h2>
+            <p>
+                Nosso site foi criado para ajudar você a localizar-se em tempo real e explorar o mundo ao seu redor. Seja para descobrir novos lugares, compartilhar sua localização com amigos ou planejar sua próxima aventura, temos tudo o que você precisa.
+            </p>
+            <p>
+                Com foco em simplicidade e funcionalidade, oferecemos ferramentas modernas para conectar você ao mundo, onde quer que esteja. Navegue, explore e compartilhe — de forma rápida e segura.
+            </p>
+            <h3 style="text-align: center;">O Que Oferecemos:</h3>
+            <ul>
+                <li>Localização em tempo real com dados precisos.</li>
+                <li>Sugestões personalizadas de lugares próximos.</li>
+                <li>Compartilhamento rápido e fácil via WhatsApp.</li>
+            </ul>
+            <p>
+                Nossa missão é facilitar sua interação com mapas e localização, trazendo inovação e praticidade para o seu dia a dia.
+            </p>
+            <p>
+                Pronto para explorar? <a href="#h2_mapa">Veja o mapa agora!</a>
+            </p>
+        </div>
+
+    </div>
+    
+
+
 
 
 
