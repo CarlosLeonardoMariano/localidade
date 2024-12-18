@@ -68,17 +68,6 @@ background-color: #0e66a1;
     padding-top: 100px;
 }
 
-section {
-    width: 100%;
-    max-width: 600px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    border: 2px solid #3498db; /* Borda azul profissional */
-    margin-top: 30px;
-}
 
 h2 {
     color: #e74c3c;
@@ -101,8 +90,9 @@ span {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 98%;
     padding: 12px;
+    margin-left: 10px;
     font-size: 1rem;
     border: 2px solid #3498db; /* Cor azul vibrante para borda */
     border-radius: 5px;
@@ -124,13 +114,16 @@ input[type="text"]:focus {
     background-color: #eaf6ff; /* Fundo suave no foco */
 }
 #copy{
+    bottom: 69px;
+    left: 92%;
     position: relative;
-    bottom: 70px;
-    left: 90%;
     background-color: transparent;
     color: #0e66a1;
-    font-size: 22px;
     transition: 300ms ease;
+
+}
+#copy i {
+    font-size: 24px;
 
 }
 
@@ -151,7 +144,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
+    width: 95%;
     margin-top: 20px;
 }
 
@@ -209,17 +202,44 @@ iframe{
     display: none;
 }
 
+section {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 0 0px 30px; /* Remove o padding superior */
+    text-align: center;
+    border: 2px solid #3498db; /* Borda azul */
+    margin-top: 30px;
+}
 
 
 
 
 
 
+#h2cabeca{
+    width: 1000px;
+     background-color: #3498db; 
+     margin-bottom: -30px;
+      padding: 20px;
+       color: white;
+        text-align: center ; 
+        border-radius: 10px 10px 0 0;
+     font-weight: 400;
+}
 
 
 /* Responsividade */
 
  @media (max-width: 600px) {
+    section {
+        width: 100%;
+        
+
+    }
+   
   
     header {
         flex-direction: column; /* Stack items vertically */
@@ -227,7 +247,14 @@ iframe{
         font-size :16px ; /* Adjust font size */
 
     }
-    
+    #copy i {
+        font-size: 16px;
+    }
+
+    #copy{
+        bottom: 65px;
+        left: 90%;
+    }
 
     ul{
         display: none;
@@ -288,10 +315,7 @@ iframe{
  }
 
 
- #copy{
-    position: relative;
-    bottom: 70px;
-    left: 86%;
-    font-size: 22px;
 
-}
+
+
+
