@@ -383,12 +383,24 @@ section {
 
  @media (max-width: 600px) {
 
+    .caixa {
+        width: 99%;}
+
+        .caixa h2 {
+            font-size: 22px;}
+
+        .caixa .sobre-conteudo {
+            padding: 15px;
+            width: 99%;
+        }
     .caixa ul {
         list-style: none;
         padding: 0;
         margin: 10px auto;
         text-align: center;
         gap: 10px;
+        display: flex;
+        flex-direction: column;
     }
     
     .caixa ul li {
