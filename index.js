@@ -138,3 +138,58 @@ copy.addEventListener('click' , ()=> {
 
 
 
+
+
+
+    // FAZENDO A PARTE DO CLIMA 
+const form = document.getElementById('search');
+const btn_Submit = document.getElementById('btn-submit')
+const cityname = document.getElementById('cityname')
+const alertar = document.getElementById('alert')
+
+
+form.addEventListener('submit', async (evento) => {
+    evento.preventDefault(); // Evita o recarregamento da página
+    const cityInput = cityname.value.trim()
+    if(!cityInput){
+        msgAlert('Por favor, insira o nome da cidade.');
+    };
+        const keyAPI = '33cc940c5cc67ec7ccf1d0c90ae01427';
+     const ApiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityInput)}&appid=${keyAPI}&units=metric&lang=pt-br`
+
+     const resultado = await fetch(ApiURL);
+     const json = await resultado.json();
+     
+     console.log(ApiURL)
+     console.log(json)
+
+     if(json.cod === 200){
+        InformaçõesJSON({
+            city:json.name,
+            pais:json.sys.country,
+            temp:json.main.temp,
+            tempmax : json.main.temp_max,
+            tempmin : json.main.temp_min,
+            descrição : json.weather[0].description,
+            tempIcon : json.weather[0].icon,
+            vento : json.wind.speed,
+            umidade : json.main.humidity
+        })
+
+     } else{
+        msgAlert('Não foi possivel localizar...')
+     }
+
+
+});
+
+        function InformaçõesJSON(json){
+        }
+      
+
+function msgAlert(msg) {
+            alertar.innerHTML = msg
+alertar.style.display = 'block'
+        }
+
+

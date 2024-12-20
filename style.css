@@ -376,8 +376,204 @@ section {
 
 
 
+#whatsapp{
+    width: 65px;
+    height: 65px;
+    background-color: green;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    display: flex;
+    position: fixed;
+
+}
+
+#whatsapp i {
+    color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    font-size: 40px;
+    bottom:22px;
+    right: 24px;
+    
+
+}
 
 
+
+/* Geral */
+.conteiner {
+    background-color: #3498db;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Barra de busca */
+#search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 5px 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#search input {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#search input:focus-visible {
+    outline: none;
+
+}
+
+#search button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#search button:hover {
+    transform: scale(1.1);
+}
+
+#search button i {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    bottom: 7px;
+    left: 40px;
+}
+
+/* Placeholder */
+#search ::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Informações principais */
+#weather {
+    margin-top: 20px;
+}
+
+#weather #title {
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Temperatura principal */
+#temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #5a7cdc, #4b61b8);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#temp img {
+    width: 70px;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+}
+
+#temp_value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#temp_descrition {
+    font-size: 1rem;
+    text-transform: capitalize;
+    opacity: 0.9;
+}
+
+/* Informações adicionais */
+#otherInfo {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#otherInfo .info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+    gap: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#otherInfo .info:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#otherInfo .info i {
+    font-size: 25px;
+    text-align: center;
+    width: 25px;
+}
+
+#otherInfo .info h2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#otherInfo .info p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#tempMaxIcon{
+    color: #7f1d1d;
+}
+#tempMinIcon{
+    color: #0284c7;
+}
+
+#humidadeIcon{
+    color: #3c00ff;
+}
+
+#ventiIcon{
+    color: #7c3aeb;
+}
+/* Alertas */
+.alert {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+}
 
 /* Responsividade */
 
@@ -433,6 +629,7 @@ section {
     .header_phone{
         position: fixed;
         top: 0;
+        z-index: 1;
     }
 
     #h2cabeca{
