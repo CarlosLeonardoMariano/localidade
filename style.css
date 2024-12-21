@@ -717,7 +717,7 @@ margin-top: 3rem;
     
         #search button i {
             font-size: 18px; /* Ajustar o tamanho do ícone */
-            left: 5rem; /* Ajustar a posição do ícone */
+            left: 3rem; /* Ajustar a posição do ícone */
             
         }
     
@@ -751,6 +751,11 @@ margin-top: 3rem;
     
         #otherInfo .info p {
             font-size: 0.9rem; /* Reduzir o tamanho da fonte do parágrafo */
+        }
+
+        #search ::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
         }
     }
     
