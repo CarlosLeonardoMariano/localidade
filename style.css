@@ -700,22 +700,62 @@ margin-top: 3rem;
     }
 
 
-
-    .conteiner{
-        width: 100%;
-        margin-bottom: 40px;
+        /* Geral */
+        .conteiner {
+            padding: 10px; /* Reduzir o padding em telas menores */
+        }
+    
+        /* Barra de busca */
+        #search {
+            width: 90%; /* Aumentar a largura da barra de busca */
+            margin-top: 2rem; /* Ajustar a margem superior */
+        }
+    
+        #search input {
+            font-size: 14px; /* Reduzir o tamanho da fonte */
+        }
+    
+        #search button i {
+            font-size: 18px; /* Ajustar o tamanho do ícone */
+            left: 8rem; /* Ajustar a posição do ícone */
+        }
+    
+        /* Informações principais */
+        #weather {
+            width: 90%; /* Aumentar a largura das informações do tempo */
+        }
+    
+        #temp {
+            flex-direction: column; /* Mudar a direção do flex para coluna */
+            align-items: center; /* Centralizar os itens */
+            padding: 15px; /* Reduzir padding */
+        }
+    
+        #temp img {
+            width: 50px; /* Reduzir o tamanho da imagem */
+        }
+    
+        #temp_value {
+            font-size: 2.5rem; /* Ajustar o tamanho da fonte da temperatura */
+        }
+    
+        #otherInfo {
+            grid-template-columns: 1fr; /* Mudar para uma coluna em telas pequenas */
+            margin-top: 30px; /* Ajustar a margem superior */
+        }
+    
+        #otherInfo .info h2 {
+            font-size: 0.8rem; /* Reduzir o tamanho da fonte do título */
+        }
+    
+        #otherInfo .info p {
+            font-size: 0.9rem; /* Reduzir o tamanho da fonte do parágrafo */
+        }
     }
+    
 
-    #otherInfo{
-        width: 90%;
-    }
-
-    #otherInfo .info {
-        width: 100%;
-        font-size: 14px;
-        padding: 5px;
-    }
- }
+  
+ 
 
 
 
