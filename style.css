@@ -406,10 +406,12 @@ section {
 
 /* Geral */
 .conteiner {
+    width: 100%;
     background-color: #3498db;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    min-height: 91vh;
 }
 
 /* Barra de busca */
@@ -417,10 +419,14 @@ section {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 80%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 12px;
     padding: 5px 15px;
     background-color: rgba(255, 255, 255, 0.2);
+margin: auto;
+margin-top: 3rem;
+
 }
 
 #search input {
@@ -430,11 +436,13 @@ section {
     color: white;
     flex-grow: 1;
     padding: 5px;
+    width: 100%;
     border-radius: 10px;
 }
 
 #search input:focus-visible {
     outline: none;
+    background-color: transparent;
 
 }
 
@@ -454,23 +462,23 @@ section {
     color: white;
     position: relative;
     bottom: 7px;
-    left: 40px;
+    left: 12rem;
 }
 
 /* Placeholder */
 #search ::placeholder {
     color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
 }
 
 /* Informações principais */
 #weather {
     margin-top: 20px;
-    display: none;
+    width: 80%;
+    margin: auto;
 }
 
-#weather .show{
-    display: block;
-}
+
 
 #weather #title {
     text-align: center;
@@ -478,6 +486,7 @@ section {
     margin-bottom: 15px;
     font-weight: bold;
     font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 /* Temperatura principal */
@@ -511,7 +520,7 @@ section {
 
 /* Informações adicionais */
 #otherInfo {
-    margin-top: 20px;
+    margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;

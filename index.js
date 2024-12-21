@@ -182,7 +182,7 @@ form.addEventListener('submit', async (evento) => {
             descrição : json.weather[0].description,
             tempIcon : json.weather[0].icon,
             vento : json.wind.speed,
-            umidade : json.main.humidity
+            umidade : json.main.humidity,
         })
 
      } else{
@@ -193,8 +193,7 @@ form.addEventListener('submit', async (evento) => {
 });
 
         function InformaçõesJSON(json){
-            weather.classList.add('show')
-
+            alert('Aguarde alguns segundos! sua pesquisa já está sendo verificada...')
             title.innerHTML = `${json.city},${json.pais}`
             temp_value.innerHTML = `${json.temp.toFixed(1).toString().replace('.', ',')} <sup>C°</sup>`
             temp_descrition.innerHTML = `${json.descrição}`
@@ -203,6 +202,8 @@ form.addEventListener('submit', async (evento) => {
             tempMin.innerHTML = `${json. tempmin.toFixed(1).toString().replace('.',',')} <sup>C°</sup>`
             vento.innerHTML = `${json.vento} km/h`
             umidade.innerHTML = `${json. umidade} %`
+
+
         }
       
 
