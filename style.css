@@ -717,7 +717,7 @@ margin-top: 3rem;
     
         #search button i {
             font-size: 18px; /* Ajustar o tamanho do ícone */
-            left: 8rem; /* Ajustar a posição do ícone */
+            position: static;
         }
     
         /* Informações principais */
