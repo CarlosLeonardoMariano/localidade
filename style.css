@@ -717,7 +717,7 @@ margin-top: 3rem;
     
         #search button i {
             font-size: 18px; /* Ajustar o tamanho do ícone */
-            left: 1.5rem; /* Ajustar a posição do ícone */
+            left: 1rem; /* Ajustar a posição do ícone */
             
         }
     
@@ -756,6 +756,10 @@ margin-top: 3rem;
         #search ::placeholder {
             color: rgba(255, 255, 255, 0.7);
             font-size: 11px;
+        }
+
+        #search button:hover {
+            transform: scale(1.0);
         }
     }
     
