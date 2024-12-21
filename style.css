@@ -465,6 +465,11 @@ section {
 /* Informações principais */
 #weather {
     margin-top: 20px;
+    display: none;
+}
+
+#weather .show{
+    display: block;
 }
 
 #weather #title {
@@ -708,6 +713,12 @@ section {
     button {
         padding :10px ; /* Adjust padding for inputs and buttons */
         font-size :1rem ; /* Adjust font size */
+    }
+
+
+
+    .conteiner{
+        width: 100%;
     }
  }
 

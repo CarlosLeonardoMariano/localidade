@@ -146,13 +146,21 @@ const form = document.getElementById('search');
 const btn_Submit = document.getElementById('btn-submit')
 const cityname = document.getElementById('cityname')
 const alertar = document.getElementById('alert')
-
+const title = document.getElementById('title')
+const temp_value = document.getElementById('temp_value')
+const temp_descrition = document.getElementById('temp_descrition')
+const tempIcoon = document.getElementById('temp_img')
+const tempMax = document.getElementById('temp_max')
+const tempMin = document.getElementById('temp_min')
+const vento = document.getElementById('vento')
+const umidade = document.getElementById('humidade')
+const weather = document.getElementById('weather')
 
 form.addEventListener('submit', async (evento) => {
     evento.preventDefault(); // Evita o recarregamento da página
     const cityInput = cityname.value.trim()
     if(!cityInput){
-        msgAlert('Por favor, insira o nome da cidade.');
+        alert('Por favor, insira o nome da cidade.');
     };
         const keyAPI = '33cc940c5cc67ec7ccf1d0c90ae01427';
      const ApiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityInput)}&appid=${keyAPI}&units=metric&lang=pt-br`
@@ -162,6 +170,7 @@ form.addEventListener('submit', async (evento) => {
      
      console.log(ApiURL)
      console.log(json)
+     
 
      if(json.cod === 200){
         InformaçõesJSON({
@@ -177,15 +186,27 @@ form.addEventListener('submit', async (evento) => {
         })
 
      } else{
-        msgAlert('Não foi possivel localizar...')
+        alert('Não foi possivel localizar...')
      }
 
 
 });
 
         function InformaçõesJSON(json){
+            weather.classList.add('show')
+
+            title.innerHTML = `${json.city},${json.pais}`
+            temp_value.innerHTML = `${json.temp.toFixed(1).toString().replace('.', ',')} <sup>C°</sup>`
+            temp_descrition.innerHTML = `${json.descrição}`
+            tempIcoon.setAttribute('src',`https://openweathermap.org/img/wn/${json.tempIcon}@2x.png`)
+            tempMax.innerHTML = `${json. tempmax.toFixed(1).toString().replace('.',',')} <sup>C°</sup>`
+            tempMin.innerHTML = `${json. tempmin.toFixed(1).toString().replace('.',',')} <sup>C°</sup>`
+            vento.innerHTML = `${json.vento} km/h`
+            umidade.innerHTML = `${json. umidade} %`
         }
       
+
+
 
 function msgAlert(msg) {
             alertar.innerHTML = msg
