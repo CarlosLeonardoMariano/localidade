@@ -215,3 +215,53 @@ alertar.style.display = 'block'
         }
 
 
+
+        // ANIMAÇÃO SCROLL NO HEADER
+        const header = document.getElementById('topo')
+
+        const MyHeader = new IntersectionObserver( (parametro)=> {
+            parametro.forEach( (elemento)=> {
+                if(elemento.isIntersecting === true){
+                    elemento.target.classList.add('show')
+                }
+                 else{
+                    elemento.target.classList.remove('show')
+
+                 }
+            })
+         });
+
+         MyHeader.observe(header) 
+
+
+
+const infoElements = document.querySelectorAll('.section'); // Seleciona os elementos internos com a classe 'info'
+
+const myInfo = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show2');
+        } else {
+            entry.target.classList.remove('show2');
+        }
+    });
+}, { threshold: 0.5 }); // Ajusta o threshold se necessário para quando considerar visível
+
+infoElements.forEach((info) => {
+    myInfo.observe(info);
+});
+
+
+const mapa = document.getElementById('mapa')
+
+const myMap = new IntersectionObserver( (entries)=> {
+entries.forEach( (entry)=>{
+    if(entry.isIntersecting){
+        entry.target.classList.add('map3')
+    } else {
+        entry.target.classList.remove('map3')
+    }
+})
+})
+
+myMap.observe(mapa)

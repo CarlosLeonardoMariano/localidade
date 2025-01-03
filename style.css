@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+
 html{
     scroll-behavior: smooth;
 }
@@ -37,8 +38,17 @@ header{
     background-color: #3498db;
     color: white;
     align-items: center;
-  
-    
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(15px);
+}
+
+.show{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 2s;  
+    filter: blur(0px);
+
 }
 
 ul{
@@ -177,8 +187,22 @@ p#Perro {
     width: 100%;
     height: 100vh;
     background-color: #3498db;
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(-100%);
+    filter: blur(10px);
+
 
 }
+
+.map3{
+    filter: blur(0px);
+    opacity: 1;
+    transition: all 2s;
+ transform: translateX(0);
+}
+
+
 
 iframe{
     width: 10%;
@@ -204,7 +228,7 @@ iframe{
     display: none;
 }
 
-section {
+.section {
     width: 100%;
     max-width: 1000px;
     background-color: #fff;
@@ -214,9 +238,21 @@ section {
     text-align: center;
     border: 2px solid #3498db; /* Borda azul */
     margin-top: 30px;
+    transform: translateX(-50%);
+    filter: blur(10px);
+    opacity: 0;
+
+
 }
 
 
+.show2{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 700ms;  
+    filter: blur(0px);
+
+}
 
 
 
@@ -230,7 +266,10 @@ section {
         text-align: center ; 
         border-radius: 10px 10px 0 0;
      font-weight: 400;
+  
 }
+
+
 
 
 
@@ -499,6 +538,8 @@ margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
+
 }
 
 #otherInfo .info {
@@ -512,6 +553,8 @@ margin-top: 3rem;
     gap: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
+
 
 #otherInfo .info:hover {
     transform: translateY(-3px);
@@ -766,9 +809,6 @@ margin-top: 3rem;
 
   
  
-
-
-
 
 
 
